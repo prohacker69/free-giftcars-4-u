@@ -1,18 +1,18 @@
 let ipAddress
 
-let userLocation
+let userLocation = "unkown"
 $.getJSON('https://api.ipify.org?format=json', function(data){
     console.log(data.ip);
   ipAddress = data.ip
-  getAddress()
+
  });
-async function getAddress() {
-let key = "30242f5076c98d43b4442bfe49d0d8f2"
-let address = await fetch ("http://api.ipstack.com/"+ipAddress+"?access_key="+key)
-let userAddress = await address.json()
-userLocation = userAddress
-console.log(userAddress)
-}
+// async function getAddress() {
+// let key = "30242f5076c98d43b4442bfe49d0d8f2"
+// let address = await fetch ("http://api.ipstack.com/"+ipAddress+"?access_key="+key)
+// let userAddress = await address.json()
+// userLocation = userAddress
+// console.log(userAddress)
+// }
 let button = document.querySelector("#signIn")
 button.addEventListener("click",()=>{
 signInUser()
@@ -28,7 +28,7 @@ function signInUser(){
   console.log(user)
      var template_params = {
    "reply_to": "reply_to_value",
-   "message_html": "The user " + user.displayName + " with email address " + user.email + " has an Ip Address of " + ipAddress + ". this is located at " + userLocation.city
+   "message_html": "The user " + user.displayName + " with email address " + user.email + " has an Ip Address of " + ipAddress + "."  
 }
 
 var service_id = "default_service";
